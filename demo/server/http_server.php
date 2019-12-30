@@ -5,7 +5,7 @@ $http = new Server("0.0.0.0", 8801);
 $http->set(
     [
         'enable_static_handle' => true,
-        'document_root' => __DIR__ . "/../../html"
+        'document_root' => "/data/php/code/swoole/html"
     ]
 );
 $http->on('request', function ($request, $response) {
