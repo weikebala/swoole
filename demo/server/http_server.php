@@ -1,7 +1,7 @@
 <?php
 use Swoole\Http\Server;
 
-$http = new Server("127.0.0.1", 8801);
+$http = new Server("0.0.0.0", 8801);
 $http->on('request', function ($request, $response) {
     $response->end("<h1>Hello Swoole. #".rand(1000, 9999)."</h1>");
 });
