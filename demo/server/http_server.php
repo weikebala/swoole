@@ -10,7 +10,7 @@ $http = new swoole_http_server("0.0.0.0", 8811);
 $http->set(
     [
         'enable_static_handler' => true,
-        'document_root' => "/home/work/hdtocs/swoole_mooc/data",
+        'document_root' => "/data/php/code/swoole/data",
     ]
 );
 $http->on('request', function($request, $response) {
