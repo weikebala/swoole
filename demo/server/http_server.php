@@ -13,7 +13,7 @@ $http->set(
         'document_root' => "/project/php/swoole/data",
     ]
 );
-$http->on('request', function($request, $response) use ($http) {
+$http->on('request', function($request, $response) {
     //print_r($request->get);
     $content = [
         'date:' => date("Ymd H:i:s"),
@@ -26,7 +26,7 @@ $http->on('request', function($request, $response) use ($http) {
 //        // todo
 //    }, FILE_APPEND);
     $response->cookie("singwa", "xsssss", time() + 1800);
-    $response->end("sss". json_encode($http->stats()));
+    $response->end("sss". json_encode());
 });
 
 $http->start();
